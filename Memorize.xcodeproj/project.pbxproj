@@ -60,11 +60,11 @@
 		033BB5A526EB8F4C00133903 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				0392586E26F03F1C00D6B99B /* ViewModel */,
+				0392586D26F03F0200D6B99B /* Model */,
+				0392586C26F03EDC00D6B99B /* View */,
 				033BB5A626EB8F4C00133903 /* AppDelegate.swift */,
 				033BB5A826EB8F4C00133903 /* SceneDelegate.swift */,
-				033BB5AA26EB8F4C00133903 /* ContentView.swift */,
-				0362CACA26ED33B80077C1FE /* MemoryGame.swift */,
-				0362CACC26ED3B550077C1FE /* EmojiMemoryGame.swift */,
 				033BB5AC26EB8F4D00133903 /* Assets.xcassets */,
 				033BB5B126EB8F4D00133903 /* LaunchScreen.storyboard */,
 				033BB5B426EB8F4D00133903 /* Info.plist */,
@@ -79,6 +79,30 @@
 				033BB5AF26EB8F4D00133903 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0392586C26F03EDC00D6B99B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				033BB5AA26EB8F4C00133903 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0392586D26F03F0200D6B99B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0362CACA26ED33B80077C1FE /* MemoryGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0392586E26F03F1C00D6B99B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0362CACC26ED3B550077C1FE /* EmojiMemoryGame.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
