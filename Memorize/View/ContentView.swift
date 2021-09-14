@@ -17,7 +17,7 @@ struct ContentView: View {
                     CardView(card: card)
                         .aspectRatio(2 / 3, contentMode: .fit)
                         .onTapGesture {
-                            viewModel.choos(card)
+                            viewModel.choose(card)
                         }
                 }
             }
@@ -63,6 +63,8 @@ struct CardView: View {
                 shape.strokeBorder(lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/, antialiased: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
 
                 Text(card.content).font(.largeTitle)
+            } else if card.isMatch {
+                shape.opacity(0)
             } else {
                 shape.fill()
             }
