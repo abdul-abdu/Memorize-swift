@@ -9,42 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
-    
-    var body: some View {
 
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
-                    ForEach(viewModel.cards) {card in
-                        CardView(card: card)
-                            .aspectRatio(2/3, contentMode: .fit)
-                            .onTapGesture {
-                                viewModel.choos(card)
-                            }
-                    }
+    var body: some View {
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
+                ForEach(viewModel.cards) { card in
+                    CardView(card: card)
+                        .aspectRatio(2 / 3, contentMode: .fit)
+                        .onTapGesture {
+                            viewModel.choos(card)
+                        }
+                }
             }
             .padding(.horizontal)
             .foregroundColor(.red)
-                Spacer()
-            }
-            
-            HStack {
-                add
-                Spacer()
-                remove
-            }
-            .padding(.horizontal)}
-    
+            Spacer()
+        }
+
+        HStack {
+            add
+            Spacer()
+            remove
+        }
+        .padding(.horizontal)
+    }
+
     var remove: some View {
         Button {
-            
         } label: {
             Image(systemName: "minus.circle")
                 .font(.largeTitle)
         }
     }
-    var add : some View {
+
+    var add: some View {
         Button {
-            
         } label: {
             Image(systemName: "plus.circle")
                 .font(.largeTitle)
@@ -52,10 +51,9 @@ struct ContentView: View {
     }
 }
 
-
 struct CardView: View {
     let card: MemoryGame<String>.Card
-       
+
     var body: some View {
         ZStack {
             let shape = RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
@@ -63,7 +61,7 @@ struct CardView: View {
             if card.isFaceUp {
                 shape.fill().foregroundColor(.white)
                 shape.strokeBorder(lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/, antialiased: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                
+
                 Text(card.content).font(.largeTitle)
             } else {
                 shape.fill()
@@ -71,11 +69,6 @@ struct CardView: View {
         }
     }
 }
-
-
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
