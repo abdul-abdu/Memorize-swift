@@ -27,35 +27,29 @@ struct ContentView: View {
                 Spacer()
             }
             
-//            HStack {
-////                add
-//                Spacer()
-//                remove
-//            }
-//            .padding(.horizontal)
-        
-    }
+            HStack {
+                add
+                Spacer()
+                remove
+            }
+            .padding(.horizontal)}
     
-//    var remove: some View {
-//        Button {
-//            if emojiCount > 1 {
-//            emojiCount -= 1
-//            }
-//        } label: {
-//            Image(systemName: "minus.circle")
-//                .font(.largeTitle)
-//        }
-//    }
-//    var add : some View {
-//        Button {
-//            if emojiCount < emojis.count {
-//                emojiCount += 1
-//            }
-//        } label: {
-//            Image(systemName: "plus.circle")
-//                .font(.largeTitle)
-//        }
-//    }
+    var remove: some View {
+        Button {
+            
+        } label: {
+            Image(systemName: "minus.circle")
+                .font(.largeTitle)
+        }
+    }
+    var add : some View {
+        Button {
+            
+        } label: {
+            Image(systemName: "plus.circle")
+                .font(.largeTitle)
+        }
+    }
 }
 
 
